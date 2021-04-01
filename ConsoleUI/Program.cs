@@ -14,6 +14,57 @@ namespace ConsoleUI
              * Todo follow all comments!! 
              */
 
+            var vehicles = new List<Vehicle>();
+
+            Car c = new Car();
+            c.Name = "Car 1";
+            c.Year = "1990";
+            c.Make = "Honda";
+            c.Model = "Civic";
+            c.HasTrunk = true;
+
+            Motorcycle m = new Motorcycle();
+            m.Name = "Motorcycle 1";
+            m.Year = "2009";
+            m.Make = "Kawasaki";
+            m.Model = "Ninja";
+            m.HasSideCar = true;
+
+            Vehicle v1 = new Car();
+            v1.Name = "Vehicle 1";
+            v1.Year = "2016";
+            v1.Make = "Nissan";
+            v1.Model = "Rogue";
+           
+            Vehicle v2 = new Motorcycle();
+            v2.Name = "Vehicle 2";
+            v2.Year = "1966";
+            v2.Make = "BMW";
+            v2.Model = "Bike";
+
+            vehicles.Add(c);
+            vehicles.Add(m);
+            vehicles.Add(v1);
+            vehicles.Add(v2);
+
+            foreach (var item in vehicles)
+            {
+                Console.WriteLine($"Here are the stats on {item.Name}:");
+                Console.WriteLine(item.Year);
+                Console.WriteLine(item.Make);
+                Console.WriteLine(item.Model);
+                Console.WriteLine("");
+            }
+
+            c.DriveAbstract();
+            Console.WriteLine("");
+            c.DriveVirtual();
+            Console.WriteLine("");
+            m.DriveAbstract();
+            Console.WriteLine("");
+            m.DriveVirtual();
+
+
             #region Vehicles
 
             /*
